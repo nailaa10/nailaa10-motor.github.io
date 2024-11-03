@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- File CSS eksternal -->
+    <script src="script.js"></script>
+    <title>Bengkel Motor Dhori</title>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="openLogin()">Masuk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="openSignupPopup()">Daftar</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            Layanan
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" onclick="openPopupDar()">Darurat</a>
+                            <a class="dropdown-item" href="#" onclick="openPopupReg()">Reguler</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Konsultasi</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#sparepartSection">Sparepart</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <button class="btn account-btn ml-2" onclick="openAccountPopup()">
+                    <img src="Resource\akun.PNG" alt="Account" class="account-icon">
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid" id="jumbotron">
+        <div class="jumbotron-content">
+            <div class="jumbotron-logo-content">
+                <img src="Resource\logo.png" alt="Logo" class="jumbotron-logo">
+            </div>
+            <div class="jumbotron-text-content">
+                <h1 class="jumbotron-title">Bengkel Motor</h1>
+                <h1 class="jumbotron-title2">Dhori</h1>
+                <p class="jumbotron-subtitle">Layanan Lokal, Standar Global.</p>
+            </div>
+        </div>
+
+        <div class="jumbotron-bottom-content">
+            <hr class="jumbotron-divider">
+            <p class="jumbotron-text">Motor anda bermasalah? Beri tahu kami lokasi Anda!</p>
+            <button class="btn-primary btn-lg" href="#" onclick="showPopupGps()">GPS tracking</button>
+        </div>
+    </div>
+
+    <!-- Layanan Section -->
+    <div id="layananSection" class="container text-center my-5">
+        <h2 class="section-title">Layanan Servis</h2>
+        <p class="section-subtitle">Pilih layanan terbaik untuk kebutuhan motor anda</p>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="container">
+        <div class="row justify-content-around">
+            <!-- Card 1 -->
+            <div class="card service-card">
+                <img src="Resource\Reguler1.PNG" class="card-img-top" alt="Service 1">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Reguler</h5>
+                    <p class="card-text">Perawatan berkala untuk menjaga kondisi optimal motor Anda.</p>
+                    <button href="#" class="open-popup-reg" onclick="openPopupReg()">Pilih Layanan</button>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card service-card">
+                <img src="Resource\Darurat.PNG" class="card-img-top" alt="Service 2">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Darurat</h5>
+                    <p class="card-text">Perbaikan cepat sesuai dengan kondisi darurat anda.</p>
+                    <button href="#" class="open-popup-dar" onclick="showPopupGps()">Pilih Layanan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sparepart Section -->
+    <div id="sparepartSection" class="container text-center my-5">
+        <h2 class="section-title">Spare Part</h2>
+        <p class="section-subtitle">Pilih Kebutuhan Terbaik untuk Motor Anda !!</p>
+    </div>
+
+    <!-- Product Section 1 -->
+    <div class="container my-4">
+        <div class="row justify-content-around">
+            <!-- Card 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="Resource\ban.PNG" class="card-img-top" alt="Service 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ban</h5>
+                        <p class="card-text">Menyediakan Ban dalam, Ban luar, & Ban Tubles</p>
+                        <a href="#" class="btn btn-primary">Beli</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="Resource\aki.PNG" class="card-img-top" alt="Service 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Aki</h5>
+                        <p class="card-text">Menyediakan berbagai pilihan aki baru & isi ulang</p>
+                        <a href="#" class="btn btn-primary">Beli</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="Resource\oli.PNG" class="card-img-top" alt="Service 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Oli</h5>
+                        <p class="card-text">Oli standar hingga premium untuk motor anda</p>
+                        <a href="#" class="btn btn-primary">Beli</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="Resource\knalpot.PNG" class="card-img-top" alt="Service 4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Knalpot</h5>
+                        <p class="card-text">Knalpot berkualitas untuk performa motor Anda.</p>
+                        <a href="#" class="btn btn-primary">Beli</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Section 2 -->
+    <div class="container my-4">
+        <div class="row justify-content-around">
+            <!-- Card 5 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="Resource\busi.PNG" class="card-img-top" alt="Service 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Busi</h5>
+                        <p class="card-text">Menyediakan berbagai pilihan busi</p>
+                        <a href="#" class="btn btn-primary">Beli</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="Resource\lampu.PNG" class="card-img-top" alt="Service 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Lampu</h5>
+                        <p class="card-text">Lampu depan & belakang, lampu jarak jauh, lampu LED</p>
+                        <a href="#" class="btn btn-primary">Beli</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="Resource\kampas.PNG" class="card-img-top" alt="Service 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Kampas Rem</h5>
+                        <p class="card-text">Menyediakan kampas rem depan dan belakang</p>
+                        <a href="#" class="btn btn-primary">Beli</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="Resource\spion.PNG" class="card-img-top" alt="Service 4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Spion</h5>
+                        <p class="card-text">Berbagai style spion untuk tampilan motor lebih menarik</p>
+                        <a href="#" class="btn btn-primary">Beli</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <h1 style="font-size: 2em; margin-bottom: 30px;">Apa Kata Mereka?</h1>
+
+        <div class="testimonial">
+            <img src="Resource\orang1.PNG" alt="Samuel Wicaksana" style="width: 100%; border-radius: 10px;">
+            <div class="name">SAMUEL WICAKSANA</div>
+            <div class="rating">★★★★★</div>
+            <div class="review">"Teknisi sangat profesional dan pelayanannya memuaskan"</div>
+        </div>
+
+        <div class="testimonial">
+            <img src="Resource\orang2.PNG" alt="Albertus Perdana" style="width: 100%; border-radius: 10px;">
+            <div class="name">ALBERTUS PERDANA</div>
+            <div class="rating">★★★★★</div>
+            <div class="review">"Sudah berlangganan sejak 2 tahun yang lalu, dari maba selalu di Bengkel Motor Dori"
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <img src="Resource\orang3.PNG" alt="Fahmaningrum" style="width: 100%; border-radius: 10px;">
+            <div class="name">AHMAD FAHMANINGRUM</div>
+            <div class="rating">★★★★★</div>
+            <div class="review">"Berkat bapak teknisi, saya jadi tidak telat masuk kantor, gercep sekali pelayanannya"
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-container container-fluid py-5">
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4 text-center text-md-left">
+                    <img src="Resource\logo.png" alt="Logo" class="footer-logo">
+                    <h2 class="footer-title">BENGKEL MOTOR DHORI</h2>
+                </div>
+                <div class="col-md-4 text-center text-md-left">
+                    <h5 class="footer-heading">LOKASI</h5>
+                    <p>Jl. Raya Ponorogo, Durunan, Mlilir, Kec. Dolopo, Kab. Madiun, Jawa Timur</p>
+                    <h5 class="footer-heading">CONTACT US</h5>
+                    <p>081381522780</p>
+                </div>
+                <div class="col-md-4">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.9457590805023!2d111.51213447476611!3d-7.795567892224491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79a24905ecba35%3A0x5060da26e92dbb27!2sBengkel%20Motor%20Dhori!5e0!3m2!1sid!2sid!4v1730562940638!5m2!1sid!2sid"
+                        width="350" height="250" style="border:0; border-radius: 10px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latar belakang dan konten popup reguler-->
+    <div class="popup-overlay" id="popupOverlayReg">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopupReg()">×</span>
+
+            <div class="service-item">
+                <img src="Resource\tuneup.PNG" alt="Tune Up">
+                <a href="#" class="btn service-label">TUNE UP</a>
+            </div>
+
+            <div class="service-item">
+                <img src="Resource\gantioli.PNG" alt="Ganti Oli">
+                <a href="#" class="btn service-label">GANTI OLI</a>
+
+            </div>
+
+            <div class="service-item">
+                <img src="Resource\gantirem.PNG" alt="Ganti Rem">
+                <a href="#" class="btn service-label">GANTI REM</a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Latar belakang dan konten popup reguler-->
+    <div class="popup-overlay" id="popupOverlayDar">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopupDar()">×</span>
+
+            <div class="service-item">
+                <img src="Resource\tuneup.PNG" alt="Tune Up">
+                <a href="#" class="btn service-label">TUNE UP</a>
+            </div>
+
+            <div class="service-item">
+                <img src="Resource\gantioli.PNG" alt="Ganti Oli">
+                <a href="#" class="btn service-label">GANTI OLI</a>
+
+            </div>
+
+            <div class="service-item">
+                <img src="Resource\gantirem.PNG" alt="Ganti Rem">
+                <a href="#" class="btn service-label">GANTI REM</a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Latar belakang dan konten popup login -->
+    <div class="popup-login" id="popupLogin">
+        <div class="login-content">
+            <span class="close-btn" onclick="closeLogin()">×</span>
+
+            <h2>Login</h2>
+            <form class="login-form" onsubmit="handleSubmit(event)">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Latar belakang dan konten popup sign-up -->
+    <div class="signup-overlay" id="signupPopupOverlay">
+        <div class="signup-content">
+            <span class="close-btn" onclick="closeSignupPopup()">×</span>
+
+            <h2>Daftar</h2>
+            <form class="signup-form" onsubmit="handleSignup(event)">
+                <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Konfirmasi Password"
+                    required>
+                <button type="submit">Daftar</button>
+            </form>
+        </div>
+    </div>
+    <div id="accountPopup" class="account-popup">
+        <div class="account-popup-content">
+            <span class="close-btn" onclick="closeAccountPopup()">&times;</span>
+            <h3>Akun Pengguna</h3>
+            <p><strong>Nama Akun:</strong> Nama Pengguna</p>
+
+            <!-- Kontainer untuk tombol gambar dengan label -->
+            <div class="akun-item-container">
+                <!-- Riwayat Transaksi -->
+                <div class="akun-item">
+                    <button class="btn akun-button" onclick="openRiwayat()">
+                        <img src="Resource\riwayat.PNG" alt="Riwayat">
+                        <span class="akun-label">Riwayat Transaksi</span>
+                    </button>
+                </div>
+
+                <!-- Jadwal Servis -->
+                <div class="akun-item">
+                    <button class="btn akun-button" onclick="openJadwal()">
+                        <img src="Resource\jad.PNG" alt="Jadwal">
+                        <span class="akun-label">Jadwal Servis</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Overlay for popup -->
+    <div class="overlay-gps" id="overlaygps">
+        <!-- Popup content -->
+        <div class="gps-popup">
+            <span class="close-btn" onclick="closePopupGps()">&times;</span>
+            <p>Apa keluhan motor anda? Izinkan kami mengakses lokasi anda.</p>
+            <div class="in-container">
+                <input type="text" class="input-keluh" placeholder="Tulis keluhan anda di sini">
+                <button class="btn-submit">Submit</button>
+            </div>
+            <button class="btn btn-secondary">Akses Lokasi</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,526 @@
+/* Tombol Akun */
+.account-btn {
+    padding: 0; /* Hilangkan padding pada tombol */
+    border: none; /* Hilangkan border pada tombol */
+    background: none; /* Hilangkan background pada tombol */
+    width: 35px;
+    height: 35px;
+}
+
+.account-icon {
+    width: 100%; /* Buat ikon memenuhi tombol */
+    height: 100%;
+    object-fit: cover; /* Pastikan ikon sesuai dengan tombol */
+    border-radius: 10%; /* Membuat ikon menjadi bulat */
+}
+
+/* Jumbotron Styles */
+#jumbotron {
+    background: url(bg.png) no-repeat center center;
+    background-size: cover;
+    height: 630px;
+    color: white;
+    padding: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.jumbotron-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.jumbotron-logo-content {
+    border-radius: 50%;
+    width: 200px;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+.jumbotron-logo {
+    border-radius: 50%;
+    width: 150px;
+}
+
+
+.jumbotron-title {
+    font-size: 4.5em;
+    color: whitesmoke;
+    font-family: 'Bodoni', serif;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+}
+
+.jumbotron-title2{
+    font-size: 4.5em;
+    color: whitesmoke;
+    font-family: 'Bodoni', serif;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+}
+
+.jumbotron-subtitle {
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #ff7f22;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.jumbotron-bottom-content {
+    text-align: center;
+    margin-top: auto; /* Membuat bagian ini tetap di bawah */
+}
+
+.jumbotron-divider {
+    border-color: whitesmoke;
+    width: 50%;
+    margin: 0 auto 20px;
+}
+
+.jumbotron-text {
+    color: white;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+}
+/* Untuk tampilan responsif */
+@media (max-width: 768px) {
+    .jumbotron-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .jumbotron-logo-content {
+        position: static;
+        margin-top: 20px;
+    }
+    
+    .jumbotron-title {
+        font-size: 2em;
+    }
+    
+    .jumbotron-subtitle {
+        font-size: 1.2em;
+    }
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    font-family: 'Arial Black', sans-serif;
+    color: #333;
+}
+
+.section-subtitle {
+    font-size: 20px;
+    color: #555;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Card Styles */
+.service-card {
+    width: 18rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.service-card .card-img-top {
+    height: 200px;
+    object-fit: fill;
+}
+
+/* Product Card Styles */
+.product-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .card-img-top {
+    height: 150px;
+    object-fit: fill;
+}
+
+.product-card .card-title {
+    font-weight: bold;
+}
+
+.product-card .card-text {
+    color: #555;
+    font-size: 14px;
+}
+
+/* Button Style for "Beli" Button */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.testimonials {
+    font-family: Arial, sans-serif;
+    background-color: #ff7f22;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    padding: 20px;
+}
+  
+.testimonial {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.name {
+    font-weight: bold ;
+    margin-top: 10px;
+}
+
+.rating {
+    color: #FFD700;
+    font-size: 1.2em;
+}
+
+.review {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* Footer Styles */
+.footer-container {
+    background-color: #f8f9fa;
+}
+
+.footer-logo {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.footer-title {
+    color: #e86a1f;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.footer-heading {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.footer-map {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Tombol untuk membuka popup */
+.open-popup-reg {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.open-popup-dar {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Style untuk latar belakang popup */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Style untuk konten popup */
+.popup-content {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+/* Style untuk item layanan */
+.service-item {
+    width: 150px;
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.service-label {
+    background-color: #ff7f22;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+ 
+/* Style untuk latar belakang popup */
+.popup-login {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Style untuk konten popup */
+.login-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style untuk form login */
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+}
+
+.signup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Style untuk konten popup */
+.signup-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Style untuk form daftar */
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Pop-up Akun */
+.account-popup {
+    display: none; /* Pop-up disembunyikan secara default */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+}
+
+.account-popup-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 450px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.akun-item-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.akun-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.akun-button {
+    background: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.akun-button img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 5px;
+    border-radius: 50%;
+}
+
+.akun-label {
+    font-size: 18px;
+    color: #333;
+}
+
+.overlay-gps {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Style for popup */
+.gps-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    z-index: 2;
+    text-align: center;
+}
+
+
+.btn-secondary {
+    background-color: #ff7f22;
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+/* Style for input box */
+.in-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.input-keluh {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-submit {
+    margin-left: 5px;
+    padding: 8px 12px;
+    background-color: #ff7f22;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #929aa0;
+}
